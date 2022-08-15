@@ -1,4 +1,4 @@
-# YoloV4
+# Set Up Nano
 Deep-stream Pipeline and Configuration Files
 1) To Run ssh into jetson Nano
 
@@ -10,10 +10,10 @@ https://docs.nvidia.com/metropolis/deepstream/dev-guide/
 
 3)Loading Container 
 
-
 mkdir my_apps
 
 mkdir Project
+# Load Container 
 
 sudo docker run --runtime nvidia -it --rm --network host \
     -v /tmp/.X11-unix/:/tmp/.X11-unix \
@@ -23,16 +23,15 @@ sudo docker run --runtime nvidia -it --rm --network host \
     --device /dev/video0 \
     path_to_container
 
-4) Setting up YoloV4
+# Setting up YoloV4
 
-4.1
 cd /opt/nvidia/deepstream/deepstream/sources/project
 #Make 
 mkdir weights && cd weights
 
 #Store Custom weights and Configuration file into weights folder
 
-4.2) Building Custom Yolo
+# Building Custom Yolo
 
 cd /opt/nvidia/deepstream/deepstream/sources/project
 
@@ -46,7 +45,7 @@ cd /opt/nvidia/deepstream/deepstream/sources/yolo
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 
 
-5) Running Program Inside of Deepstream Container 
+Running Program Inside of Deepstream Container 
 
 MY_APPS = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_apps'
 
@@ -57,11 +56,11 @@ OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_a
         file://$MY_APPS/InputFiles/GridSmartCrossWalk.mp4
         
 #View video Output
-# Watch the saved video
+
+#Watch the saved video
 import os
 from IPython.display import Video
 OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_apps/OutputFiles/output7.mp4'
-
 video_path = os.path.relpath(OUTPUT_PATH_EX1)
 Video(video_path, width = 680, height = 480)
 

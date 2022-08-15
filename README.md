@@ -10,6 +10,7 @@ https://docs.nvidia.com/metropolis/deepstream/dev-guide/
 
 # Relevent Directories 
 mkdir my_apps
+
 mkdir Project
 
 # Load Container 

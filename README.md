@@ -33,6 +33,8 @@ mkdir weights && cd weights
 
 #Store Custom weights and Configuration file into weights folder
 
+https://mcmasteru365.sharepoint.com/:u:/r/sites/RTA2SmartDevicesandSensors/Shared%20Documents/RTA%202.3%20Single%20IoT%20Edge%20Appliance/YOLO%20weights/yolo-obj_best_n4.weights?csf=1&web=1&e=252ABk
+
 # Building Custom Yolo
 
 cd /opt/nvidia/deepstream/deepstream/sources/project

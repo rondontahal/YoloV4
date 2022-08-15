@@ -29,7 +29,8 @@ sudo docker run --runtime nvidia -it --rm --network host \
 cd /opt/nvidia/deepstream/deepstream/sources/project
 #Make 
 mkdir weights && cd weights
-Store Custom weights and Configuration file into weights folder
+
+#Store Custom weights and Configuration file into weights folder
 
 4.2) Building Custom Yolo
 cd /opt/nvidia/deepstream/deepstream/sources/project

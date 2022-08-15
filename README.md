@@ -1,11 +1,13 @@
 # Set Up Nano
 Deep-stream Pipeline and Configuration Files
-#To Run ssh into jetson Nano
+
+# To Run ssh into jetson Nano
 
 ssh user_name@port_id
 
 # Nvidia Guide for Setting up Deepstream
 https://github.com/NVIDIA-AI-IOT/deepstream_python_apps
+
 https://docs.nvidia.com/metropolis/deepstream/dev-guide/
 
 # Relevent Directories 

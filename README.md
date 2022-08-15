@@ -12,7 +12,8 @@ https://docs.nvidia.com/metropolis/deepstream/dev-guide/
 
 
 mkdir my_apps
-mddir Project
+
+mkdir Project
 
 sudo docker run --runtime nvidia -it --rm --network host \
     -v /tmp/.X11-unix/:/tmp/.X11-unix \

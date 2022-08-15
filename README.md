@@ -64,3 +64,7 @@ OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_a
 
 video_path = os.path.relpath(OUTPUT_PATH_EX1)
 Video(video_path, width = 680, height = 480)
+
+#Next Steps
+
+The plan is get all this data into one "image file" which can run a container with all the dependencies prebuilt onto any system

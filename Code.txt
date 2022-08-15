@@ -1,0 +1,43 @@
+ssh rondon@192.168.55.1
+
+
+
+
+sudo docker run --runtime nvidia -it --rm --network host \
+    -v /tmp/.X11-unix/:/tmp/.X11-unix \
+    -v /tmp/argus_socket:/tmp/argus_socket \
+    -v ~/my_apps:/dli/task/my_apps \
+    --device /dev/video0 \
+    nvcr.io/nvidia/dli/dli-nano-deepstream:<tag>
+
+
+
+
+# create a reusable script
+echo "sudo docker run --runtime nvidia -it --rm --network host \
+    -v /tmp/.X11-unix/:/tmp/.X11-unix \
+    -v /tmp/argus_socket:/tmp/argus_socket \
+    -v ~/my_apps:/dli/task/my_apps \
+    -v ~/my_apps:/dli/task/Project \	
+    --device /dev/video0 \
+    nvcr.io/nvidia/dli/dli-nano-deepstream:v2.0.0-DS6.0.1 " > ds_docker_run.sh
+
+# make the script executable
+chmod +x ds_docker_run.sh
+
+# run the script
+./ds_docker_run.sh
+
+
+192.168.55.1:8888
+
+rtsp://192.168.55.1:8554/ds-test
+
+
+sudo docker run --runtime nvidia -it --rm --network host \
+    -v /tmp/.X11-unix/:/tmp/.X11-unix \
+    -v /tmp/argus_socket:/tmp/argus_socket \
+    -v ~/my_apps:/dli/task/my_apps \
+    -v ~/Project:/dli/task/deepstream/sources/project \
+    --device /dev/video0 \
+    nvcr.io/nvidia/dli/dli-nano-deepstream:v2.0.0-DS6.0.1

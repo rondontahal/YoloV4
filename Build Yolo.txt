@@ -1,0 +1,6 @@
+cp -r /opt/nvidia/deepstream/deepstream/sources/project/DeepStream-Yolo/ /opt/nvidia/deepstream/deepstream/sources/yolo
+
+
+cd /opt/nvidia/deepstream/deepstream/sources/yolo/DeepStream-Yolo/
+
+CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo

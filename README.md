@@ -56,7 +56,7 @@ MY_APPS = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_a
 
 OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_apps/OutputFiles/file_name.mp4'
 
-!cd $MY_APPS/Cubic_Yolo_V4 \
+!cd $MY_APPS/Program_Dir \
     && python3 deepstream_test3_mp4_out-Copy1.py -o $OUTPUT_PATH_EX1 -i \
         file://$MY_APPS/InputFiles/File_Name.mp4
         

@@ -45,3 +45,22 @@ cd /opt/nvidia/deepstream/deepstream/sources/yolo
 
 CUDA_VER=10.2 make -C nvdsinfer_custom_impl_Yolo
 
+
+5) Running Program Inside of Deepstream Container 
+
+MY_APPS = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_apps'
+
+# Run the app with YOLO
+OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_apps/OutputFiles/output7.mp4'
+!cd $MY_APPS/Cubic_Yolo_V4 \
+    && python3 deepstream_test3_mp4_out-Copy1.py -o $OUTPUT_PATH_EX1 -i \
+        file://$MY_APPS/InputFiles/GridSmartCrossWalk.mp4
+        
+#View video Output
+# Watch the saved video
+import os
+from IPython.display import Video
+OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_apps/my_apps/OutputFiles/output7.mp4'
+
+video_path = os.path.relpath(OUTPUT_PATH_EX1)
+Video(video_path, width = 680, height = 480)

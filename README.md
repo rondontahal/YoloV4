@@ -10,6 +10,9 @@ https://github.com/NVIDIA-AI-IOT/deepstream_python_apps
 
 https://docs.nvidia.com/metropolis/deepstream/dev-guide/
 
+# Github with more custom use cases
+https://github.com/junbo-huang/deepstream_object_detection
+
 # Relevent Directories 
 mkdir my_apps
 

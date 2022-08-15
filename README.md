@@ -1,18 +1,17 @@
 # Set Up Nano
 Deep-stream Pipeline and Configuration Files
-1) To Run ssh into jetson Nano
+#To Run ssh into jetson Nano
 
 ssh user_name@port_id
 
-2) Nvidia Guide for Setting up Deepstream
+# Nvidia Guide for Setting up Deepstream
 https://github.com/NVIDIA-AI-IOT/deepstream_python_apps
 https://docs.nvidia.com/metropolis/deepstream/dev-guide/
 
-3)Loading Container 
-
+# Relevent Directories 
 mkdir my_apps
-
 mkdir Project
+
 # Load Container 
 
 sudo docker run --runtime nvidia -it --rm --network host \
@@ -55,7 +54,7 @@ OUTPUT_PATH_EX1 = '/opt/nvidia/deepstream/deepstream/sources/deepstream_python_a
     && python3 deepstream_test3_mp4_out-Copy1.py -o $OUTPUT_PATH_EX1 -i \
         file://$MY_APPS/InputFiles/GridSmartCrossWalk.mp4
         
-#View video Output
+# View video Output
 
 #Watch the saved video
 import os
